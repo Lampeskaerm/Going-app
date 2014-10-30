@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="plugins/xregexp/xregexp.min.js"></script>
+        <script type="text/javascript" src="plugins/xregexp/unicode-base.js"></script>
+
+        <!-- Jquery -->
+        <script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <!-- Pages -->
+        <script type="text/javascript" src="js/PageRenderers/RestaurantRenderers/restaurantFrontPageRenderer.js"></script>
+        <script type="text/javascript" src="js/PageRenderers/userpageRenderer.js"></script>
+
+        <!-- Menus -->
+        <script type="text/javascript" src="js/MenuRenderers/topMenuRenderer.js"></script>
+        <script type="text/javascript" src="js/MenuRenderers/optionsMenuRenderer.js"></script>
+        <script type="text/javascript" src="js/MenuRenderers/loginStatusRenderer.js"></script>
+
+        <!-- Popups -->
+        <script type="text/javascript" src="js/PopupRenderers/loginRenderer.js"></script>
+        <script type="text/javascript" src="js/PopupRenderers/signupRenderer.js"></script>
+        <script type="text/javascript" src="js/PopupRenderers/verificationRenderer.js"></script>
+
+        <!-- Function pages -->
+        <script type="text/javascript" src="js/doAjaxCall.js"></script>
+        <script type="text/javascript" src="js/googleMap.js"></script>
+        <script type="text/javascript" src="js/utilityFunctions.js"></script>
+        <script type="text/javascript" src="js/updateView.js"></script>
+        <script type="text/javascript" src="js/updateHeader.js"></script>
+        <script type="text/javascript" src="js/going.Namespace.js"></script>
+        <script type="text/javascript" src="js/popupRenderer.js"></script>
+
+        <!-- Google API -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBbQ-n6QTUO2aexDM4ShKp-A9W6sH11VO0&sensor=false"></script>
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+
+
+        <link rel="stylesheet/less" type="text/css" href="css/index.less" />
+        <script>
+            less = {
+                env: "development", // or "production"
+                async: false,       // load imports async
+                fileAsync: false,   // load imports async when in a page under
+                // a file protocol
+                poll: 1000,         // when in watch mode, time in ms between polls
+                functions: {},      // user functions, keyed by name
+                dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+                relativeUrls: false,// whether to adjust url's to be relative
+                // if false, url's are already relative to the
+                // entry less file
+                rootpath: ""// a path to add on to the start of every url
+                //resource
+            };
+        </script>
+        <script type="text/javascript" src="js/less-1.4.1.min.js"></script>
+
+
+        <script>
+        $(document).ready(function(){
+            updateView("restaurantFrontPage");
+            optionsMenuRenderer();
+            $(".optionsMenu").hide();
+            $(".popupView").hide();
+        });
+        </script>
+        <title>Going</title>
+    </head>
+    <body>
+        <div class="mainView">
+            <div class="mainHeader">
+            </div>
+            <div class="loginStatusView">
+            </div>
+            <div class="mainMenu">
+            </div>
+            <div class="optionsMenuContainer">
+            </div>
+            <div class="mainPage">
+            </div>
+        </div>
+        <div class="popupView">
+        </div>
+    </body>
+</html>

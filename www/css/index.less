@@ -1,0 +1,176 @@
+//----------------------DEFAULTS-------------------------
+
+//Fonts
+@font-face{
+	font-family: Regular;
+	src: url(fonts/Comfortaa-Regular.ttf);
+}
+@font-face{
+	font-family:Bold;
+	src: url(fonts/Comfortaa-Bold.ttf);
+}
+@font-face{
+	font-family:Light;
+	src: url(fonts/Comfortaa-Light.ttf);
+}
+
+//Colors
+@MainColor: #000000;
+@EatingBGColor: brown;
+@ButtonBGColor: bisque;
+@OptsBGColor: black;
+@PopupBGColor: rgba(0,0,0,0.4);
+@LoginBGColor: lightgreen;
+@ErrorTextColor: red;
+
+//-------------------------------------------------------
+body, html {
+	font-size: 20px;
+	color: @MainColor;
+	font-family:Regular;
+
+	.mainView{
+		position:relative;
+		width:550px;
+		height:920px;
+		margin: 0 auto 0 auto;
+		text-align:center;
+
+		.mainHeader{
+			font-size:50px;
+		}
+	
+		.slider{
+
+			width: 550px;
+			height:50px;
+			font-family:Bold;
+			font-size:25px;
+			line-height:50px;
+		
+			.sliderTap{
+				width:200px;
+				height:50px;
+				background-color: @EatingBGColor;
+				border-radius:25px 25px 0px 0px;
+				line-height:inherit;
+				float:left;
+			}
+
+			.optionsTap{
+				float:right;
+				width:60px;
+				height:50px;
+				background-color:@OptsBGColor;
+				border-radius:25px 25px 0px 0px;
+				line-height:inherit;
+				color:white;
+			}
+		}
+
+		.optionsMenuContainer{
+
+			.optionsMenu{
+				font-family:Regular;
+				width:200px;
+				height:200px;
+				position:absolute;
+				z-index:10;
+				right:0px;
+				background-color:@OptsBGColor;
+				color:white;
+			}
+
+		}
+
+		.frontPage{
+
+			width: inherit;
+			height:inherit;
+			margin: inherit;
+
+			.mainInfo{
+				font-family:Regular;
+				height:inherit;
+				width:inherit;
+				background-color:brown;
+				border-radius: 0px 0px 0px 0px;
+			
+				.mapCanvas{
+					width:400px;
+					height:400px;
+					margin: 0 auto;
+				}
+				
+				.formHolder{
+					margin: 0 auto;
+					width:310px;
+					
+
+					.textField{
+						float: left;
+						height:	20px;
+						margin-top:10px;
+					}
+					.label{
+						clear:left;
+						width: 150px;
+						text-align:left;
+						line-height:20px;
+					}
+				}
+
+				.button{
+					display: inline-block;
+					width:150px;
+					margin-top:10px;
+					height:35px;
+					line-height:35px;
+					background-color:@ButtonBGColor;
+					border-radius:15px 15px 15px 15px;
+				}
+			}
+		}
+	}
+	.popupView{
+
+		z-index:1000;
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0px;
+		left:0px;
+		background-color:@PopupBGColor;
+		text-align:center;
+
+		.loginContainer{
+			margin: 200px auto 0 auto;
+			position:relative;
+			width:400px;
+			background-color:@LoginBGColor;
+			height:200px;
+			line-height:50px;
+
+			.errorText{
+				line-height:20px;
+				color:@ErrorTextColor;
+				font-family:Bold;
+			}
+
+			.buttonHolder{
+				width:200px;
+				height:50px;
+				margin:0 auto;
+
+				.cancelButton{
+					width:100px;
+					float:left;
+				}
+				.loginButton{
+					width:100px;
+					float:left;
+				}
+			}
+		}
+	}
+}
